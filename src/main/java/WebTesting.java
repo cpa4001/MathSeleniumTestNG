@@ -29,7 +29,7 @@ public class WebTesting {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.get("https://centz.herokuapp.com/");
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         WebElement html = driver.findElement(By.tagName("html"));
         html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
@@ -49,10 +49,12 @@ public class WebTesting {
     }
 
     @Test
-    public void ChristianLILink() {
+    public void ChristianLILink() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/ul/li/a")).click();
         JavascriptExecutor je = (JavascriptExecutor) driver;
+        Thread.sleep(1000);
         je.executeScript("window.scrollBy(0,750)", "");
+        Thread.sleep(1000);
         WebElement LILink = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[1]/a"));
         LILink.click();
 
@@ -62,12 +64,12 @@ public class WebTesting {
     }
 
     @Test
-    public void JakeLILink() {
+    public void JakeLILink() throws InterruptedException {
 
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/ul/li/a")).click();
         JavascriptExecutor je = (JavascriptExecutor) driver;
         je.executeScript("window.scrollBy(0, 1050)", "");
-
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[2]/a")).click();
         ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(handles.get(2));
@@ -75,11 +77,12 @@ public class WebTesting {
     }
 
     @Test
-    public void AustinLILink() {
+    public void AustinLILink() throws InterruptedException {
         // scenario 2
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/ul/li/a")).click();
         JavascriptExecutor je = (JavascriptExecutor) driver;
         je.executeScript("window.scrollBy(0,1250)", "");
+        Thread.sleep(1000);
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[3]/a")).click();
         ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(handles.get(2));
@@ -91,7 +94,7 @@ public class WebTesting {
         Thread.sleep(5000);
         JavascriptExecutor je = (JavascriptExecutor) driver;
         je.executeScript("window.scrollBy(0,10000)", "");
-        //Thread.sleep(1000);
+        Thread.sleep(1000);
 
         driver.findElement(By.linkText("Coinranking")).click();
         ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
@@ -129,16 +132,16 @@ public class WebTesting {
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[1]/a")).click();
     }
 
-    @Test
+    @Test(priority = 1)
     public void CardClickAndScroll() throws InterruptedException {
+
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/a/img")).click();
         Thread.sleep(5000);
         JavascriptExecutor je = (JavascriptExecutor) driver;
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/nav/ul/div[2]/div[2]/div")).click();
-        Thread.sleep(3000);
-        je.executeScript("window.scrollBy(0, 250)", "");
-        Actions action = new Actions(driver);
-        action.click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/nav/ul/div[2]/div[3]/div")).click();
+
 
     }
 
@@ -156,6 +159,7 @@ public class WebTesting {
             driver.switchTo().window(handles.get(1));
             je.executeScript("window.scrollBy(0,-2000)", "");
         }
+        Thread.sleep(500);
     }
 
     @AfterClass
