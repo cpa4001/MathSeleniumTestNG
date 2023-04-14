@@ -15,24 +15,5 @@ public class FirstTestCase {
         return a + b;
     }
 
-    @Test
-    void setup() {
-        System.out.println("This is a test");
-    }
-
-    @Test
-    void login() {
-        System.out.println("This is a login test");
-    }
-
-    @Test
-    void teardown() {
-        System.out.println("closing.");
-    }
-
-    @Test
-    void testAdd(){
-        Assert.assertEquals(2, add(1,1));
-    }
 
 }

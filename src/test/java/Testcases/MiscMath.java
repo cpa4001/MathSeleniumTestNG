@@ -1,3 +1,5 @@
+package Testcases;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -35,5 +37,26 @@ public class MiscMath {
         return new double[]{firstZero, secondZero};
     }
 
+    @Test
+    public void SumsTest() {
+        Assert.assertEquals(SumOfCubesAndSquareOfSum(5), true);
+        Assert.assertEquals(SumOfCubesAndSquareOfSum(18), true);
+        Assert.assertEquals(SumOfCubesAndSquareOfSum(34), true);
+    }
+
+    @Test
+    public void DistanceTest() {
+        Assert.assertEquals(DistanceFormula(0, 0, 0, 5), 5);
+        Assert.assertEquals(DistanceFormula(5, 5, 8, 8), 4.24, 0.01 );
+        Assert.assertEquals(DistanceFormula(-5, -5, 8, 8), 18.38, 0.01 );
+    }
+
+    @Test
+    public void QuadTest() throws Exception {
+        Assert.assertEquals(QuadraticFormula(1.0, 0.0, -1.0), new double[]{1, -1}, 0.01);
+        Assert.assertEquals(QuadraticFormula(-0.2, 1.2, 0.0), new double[]{0, 6}, 0.01);
+        Assert.assertEquals(QuadraticFormula(0.1, 1.2, 3.2), new double[]{-4, -8}, 0.01);
+
+    }
 
 }

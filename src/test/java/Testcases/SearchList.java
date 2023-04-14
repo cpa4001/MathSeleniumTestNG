@@ -1,7 +1,8 @@
+package Testcases;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -54,4 +55,38 @@ public class SearchList {
         }
     }
 
+    @Test
+    public void LinearIterTest() {
+        List<Integer> list = Arrays.asList(10, 8, 9, 2, 3, 4, 63, 23, 34, 345);
+        Assert.assertEquals(LinearSearchIterative(list, 2),3 );
+        Assert.assertEquals(LinearSearchIterative(list, 6000),-1);
+        Assert.assertEquals(LinearSearchIterative(list, 9), 2);
+
+    }
+
+    @Test
+    public void LinerRecurTest() {
+        List<Integer> list = Arrays.asList(10, 8, 9, 2, 3, 4, 63, 23, 34, 345);
+        Assert.assertEquals(LinearSearchRecursive(list, 9, 0), 2);
+        Assert.assertEquals(LinearSearchRecursive(list, 2, 0),3);
+        Assert.assertEquals(LinearSearchRecursive(list, 6000, 0), -1);
+    }
+
+    // have to sort for binary
+    @Test
+    public void BinIterTest() {
+        List<Integer> list = Arrays.asList(1, 2, 4, 6, 23, 56, 78, 79, 87, 90, 101);
+        Assert.assertEquals(BinarySearchIterative(list, 2),1 );
+        Assert.assertEquals(BinarySearchIterative(list, 6000),-1);
+        Assert.assertEquals(BinarySearchIterative(list, 101), list.size() - 1);
+
+    }
+
+    @Test
+    public void BinRecurTest() {
+        List<Integer> list = Arrays.asList(1, 2, 4, 6, 23, 56, 78, 79, 87, 90, 101);
+        Assert.assertEquals(BinarySearchRecursive(list, 2, 0, list.size() - 1), 1);
+        Assert.assertEquals(BinarySearchRecursive(list, 101, 0, list.size() - 1),list.size() - 1);
+        Assert.assertEquals(BinarySearchRecursive(list, 6000, 0, list.size() - 1), -1);
+    }
 }
