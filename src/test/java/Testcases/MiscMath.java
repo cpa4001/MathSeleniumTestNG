@@ -36,6 +36,83 @@ public class MiscMath {
 
         return new double[]{firstZero, secondZero};
     }
+    
+    //Grace's methods
+    
+      public static int[][] multiplyMatrices(int[][] matrixA, int[][] matrixB) {
+        int rowsA = matrixA.length;
+        int colsA = matrixA[0].length;
+        int rowsB = matrixB.length;
+        int colsB = matrixB[0].length;
+
+        if (colsA != rowsB) {
+            throw new IllegalArgumentException("Number of columns in Matrix A must be equal to the number of rows in Matrix B");
+        }
+
+        int[][] result = new int[rowsA][colsB];
+
+        for (int i = 0; i < rowsA; i++) {
+            for (int j = 0; j < colsB; j++) {
+                int sum = 0;
+                for (int k = 0; k < colsA; k++) {
+                    sum += matrixA[i][k] * matrixB[k][j];
+                }
+                result[i][j] = sum;
+            }
+        }
+
+        return result;
+    }
+
+
+    public static boolean isPrime(int number) {
+        if (number <= 1) {
+            return false;
+        }
+        if (number <= 3) {
+            return true;
+        }
+        if (number % 2 == 0 || number % 3 == 0) {
+            return false;
+        }
+        for (int i = 5; i * i <= number; i += 6) {
+            if (number % i == 0 || number % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isPalindrome(String input) {
+        String cleanedInput = input.toLowerCase().replaceAll("\\s+", "").replaceAll("\\p{Punct}", "");
+        int left = 0;
+        int right = cleanedInput.length() - 1;
+
+        while (left < right) {
+            if (cleanedInput.charAt(left) != cleanedInput.charAt(right)) {
+                return false;
+            }
+            left++;
+            right--;
+        }
+
+        return true;
+    }
+
+    public static int lcm(int a, int b) {
+        return a * (b / gcd(a, b));
+    }
+
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    
+    //testing
 
     @Test
     public void SumsTest() {
