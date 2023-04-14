@@ -1,2 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/chris/IdeaProjects/TestNGv2"><classes><class name="examples.greeting.CreateGreetingST"><methods><include name="givenNameSayHelloShouldReturnHelloReply"/></methods></class><class name="examples.greeting.GetGreetingsST"><methods><include name="givenExistentKeyGetGreetingShouldReturnOptionalWithAGreeting"/></methods></class><class name="examples.greeting.ListGreetingsST"><methods><include name="callToListGreetingsShouldReturnEmptyListOfGreetings"/></methods></class><class name="examples.greeting.RemoveGreetingsST"><methods><include name="givenExistingGreetingRemoveGreetingShouldNotRemoveGreeting"/></methods></class><class name="examples.greeting.UpdateGreetingsST"><methods><include name="givenExistingGreetingUpdateGreetingShouldUpdateGreeting"/></methods></class><class name="examples.greeting.entity.GreetingEntityIT"><methods><include name="givenNewGreetingEntityManagerShouldPersistCreateGreeting"/><include name="givenExistingGreetingEntityManagerShouldUpdateGreeting"/><include name="givenSameEntityEqualsShouldReturnTrue"/><include name="givenDifferentEntityEqualsShouldReturnFalse"/><include name="givenNullEntityEqualsShouldReturnFalse"/><include name="givenDifferentyTypeEntityEqualsShouldReturnFalse"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/chris/IdeaProjects/TestNGv2/src/test/java/Testcases">
+        <classes>
+            <class name="Testcases.HeronsFormula">
+                <methods>
+                    <include name="HeronsTest"/>
+                </methods>
+            </class>
+            <class name="Testcases.MiscMath">
+                <methods>
+                    <include name="SumsTest"/>
+                    <include name="DistanceTest"/>
+                    <include name="QuadTest"/>
+                </methods>
+            </class>
+            <class name="Testcases.SearchList">
+                <methods>
+                    <include name="LinearIterTest"/>
+                    <include name="LinerRecurTest"/>
+                    <include name="BinIterTest"/>
+                    <include name="BinRecurTest"/>
+                </methods>
+            </class>
+            <class name="Testcases.VectorOperations">
+                <methods>
+                    <include name="MagnitudeTest"/>
+                    <include name="ScalarTest"/>
+                    <include name="DotProdTest"/>
+                    <include name="AddTest"/>
+                    <include name="SubractTest"/>
+                    <include name="CosineTest"/>
+                </methods>
+            </class>
+            <class name="Testcases.WebTesting">
+                <methods>
+                    <include name="LogoClickGoesHome"/>
+                    <include name="AboutClickGoesToAbout"/>
+                    <include name="ChristianLILink"/>
+                    <include name="JakeLILink"/>
+                    <include name="AustinLILink"/>
+                    <include name="CoinRankingLink"/>
+                    <include name="SearchCoinsOne"/>
+                    <include name="OpenCloseSidebar"/>
+                    <include name="CardClickAndScroll"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

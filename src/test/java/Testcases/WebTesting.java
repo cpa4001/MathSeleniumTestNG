@@ -133,12 +133,10 @@ public class WebTesting {
 
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/a/img")).click();
         Thread.sleep(5000);
-        JavascriptExecutor je = (JavascriptExecutor) driver;
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/nav/ul/div[2]/div[2]/div")).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/nav/ul/div[2]/div[3]/div")).click();
-
-
+        Thread.sleep(2000);
     }
 
 

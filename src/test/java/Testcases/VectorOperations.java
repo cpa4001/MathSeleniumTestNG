@@ -66,6 +66,16 @@ public class VectorOperations {
         return DotProduct(A, B) / (Magnitude(A) * Magnitude(B));
     }
 
+    public void DoubleListTestHelper(List<Double> A, List<Double> E, double DELTA) throws Exception {
+        if (A.size() != E.size()) {
+            throw new Exception("Different Size");
+        }
+        for (int i = 0; i < E.size(); i++) {
+            Assert.assertEquals(A.get(i), E.get(i), DELTA);
+        }
+    }
+
+
     @Test
     public void MagnitudeTest() {
         Assert.assertEquals(Magnitude(Arrays.asList(1.23, 1.11, 3.56, 0.98, 2.22)), 4.61, 0.01);
@@ -89,16 +99,19 @@ public class VectorOperations {
 
     @Test
     public void AddTest() throws Exception {
-        Assert.assertEquals(AddVector(Arrays.asList(1.0, 2.0, 3.0), Arrays.asList(1.0, 2.0, 3.0)), Arrays.asList(2.0, 4.0, 6.0));
-        Assert.assertEquals(AddVector(Arrays.asList(1.0, 0.0), Arrays.asList(0.0, 1.0)), Arrays.asList(1.0, 1.0));
-        Assert.assertEquals(AddVector(Arrays.asList(2.2, 3.3, 4.3), Arrays.asList(1.2, 3.2, 2.2)), Arrays.asList(3.4, 6.5, 6.5));
+        List<Double> Expected = AddVector(Arrays.asList(1.0, 2.0, 3.0), Arrays.asList(1.0, 2.0, 3.0));
+        List<Double> Actual = Arrays.asList(2.0, 4.0, 6.0);
+        DoubleListTestHelper(Actual, Expected, 0.01);
+
+        DoubleListTestHelper(AddVector(Arrays.asList(1.0, 0.0), Arrays.asList(0.0, 1.0)), Arrays.asList(1.0, 1.0), 0.01);
+        DoubleListTestHelper(AddVector(Arrays.asList(2.3, 3.3, 4.3), Arrays.asList(1.2, 3.2, 2.2)), Arrays.asList(3.5, 6.5, 6.5), 0.01);
     }
 
     @Test
     public void SubractTest() throws Exception {
-        Assert.assertEquals(AddVector(Arrays.asList(1.0, 2.0, 3.0), Arrays.asList(1.0, 2.0, 3.0)), Arrays.asList(0.0, 0.0, 0.0));
-        Assert.assertEquals(AddVector(Arrays.asList(1.0, 0.0), Arrays.asList(0.0, 1.0)), Arrays.asList(1.0, -1.0));
-        Assert.assertEquals(AddVector(Arrays.asList(2.2, 3.3, 4.3), Arrays.asList(1.2, 3.2, 2.2)), Arrays.asList(1.0, 0.1, 2.1));
+        DoubleListTestHelper(SubtractVector(Arrays.asList(1.0, 2.0, 3.0), Arrays.asList(1.0, 2.0, 3.0)), Arrays.asList(0.0, 0.0, 0.0), 0.01);
+        DoubleListTestHelper(SubtractVector(Arrays.asList(1.0, 0.0), Arrays.asList(0.0, 1.0)), Arrays.asList(1.0, -1.0), 0.01);
+        DoubleListTestHelper(SubtractVector(Arrays.asList(2.3, 3.3, 4.3), Arrays.asList(1.2, 3.2, 2.2)), Arrays.asList(1.1, 0.1, 2.1), 0.01);
     }
 
     @Test
