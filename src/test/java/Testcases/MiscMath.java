@@ -135,5 +135,80 @@ public class MiscMath {
         Assert.assertEquals(QuadraticFormula(0.1, 1.2, 3.2), new double[]{-4, -8}, 0.01);
 
     }
+    
+    //Grace's Tests 
+    @Test
+    public void testMultiplyMatrices() {
+        int[][] matrixA = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        int[][] matrixB = {
+            {7, 8},
+            {9, 10},
+            {11, 12}
+        };
+
+        int[][] expectedResult = {
+            {58, 64},
+            {139, 154}
+        };
+
+        int[][] result = Main.multiplyMatrices(matrixA, matrixB);
+        for (int i = 0; i < result.length; i++) {
+            Assert.assertEquals(result[i], expectedResult[i]);
+        }
+
+        int[][] matrixC = {
+            {2, 0},
+            {0, 2}
+        };
+
+        int[][] matrixD = {
+            {1, 3},
+            {3, 1}
+        };
+
+        int[][] expectedResult2 = {
+            {2, 6},
+            {6, 2}
+        };
+
+        int[][] result2 = Main.multiplyMatrices(matrixC, matrixD);
+        for (int i = 0; i < result2.length; i++) {
+            Assert.assertEquals(result2[i], expectedResult2[i]);
+        }
+    }
+
+    @Test
+    public void testIsPrime() {
+        Assert.assertTrue(MathUtil.isPrime(7));
+        Assert.assertTrue(MathUtil.isPrime(29));
+        Assert.assertFalse(MathUtil.isPrime(4));
+        Assert.assertFalse(MathUtil.isPrime(21));
+    }
+
+    @Test
+    public void testIsPalindrome() {
+        Assert.assertTrue(StringUtil.isPalindrome("A man, a plan, a canal, Panama!"));
+        Assert.assertTrue(StringUtil.isPalindrome("racecar"));
+        Assert.assertFalse(StringUtil.isPalindrome("hello"));
+        Assert.assertFalse(StringUtil.isPalindrome("world"));
+    }
+
+    @Test
+    public void testLcm() {
+        Assert.assertEquals(MathUtil.lcm(12, 15), 60);
+        Assert.assertEquals(MathUtil.lcm(3, 5), 15);
+        Assert.assertEquals(MathUtil.lcm(7, 11), 77);
+    }
+
+    @Test
+    public void testGcd() {
+        Assert.assertEquals(MathUtil.gcd(56, 98), 14);
+        Assert.assertEquals(MathUtil.gcd(48, 18), 6);
+        Assert.assertEquals(MathUtil.gcd(100, 75), 25);
+    }
 
 }
