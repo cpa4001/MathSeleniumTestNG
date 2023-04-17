@@ -39,7 +39,7 @@ public class MiscMath {
     
     //Grace's methods
     
-      public static int[][] multiplyMatrices(int[][] matrixA, int[][] matrixB) {
+    public static int[][] multiplyMatrices(int[][] matrixA, int[][] matrixB) {
         int rowsA = matrixA.length;
         int colsA = matrixA[0].length;
         int rowsB = matrixB.length;
@@ -82,6 +82,7 @@ public class MiscMath {
         }
         return true;
     }
+    
     public static boolean isPalindrome(String input) {
         String cleanedInput = input.toLowerCase().replaceAll("\\s+", "").replaceAll("\\p{Punct}", "");
         int left = 0;
