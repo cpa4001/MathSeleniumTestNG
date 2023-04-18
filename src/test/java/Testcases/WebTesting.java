@@ -31,61 +31,52 @@ public class WebTesting {
         html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
     }
 
-    @Test
+    @Test(priority = 3)
     public void LogoClickGoesHome() {
-        // scenario one
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/a/img")).click();
         Assert.assertEquals(driver.getCurrentUrl(), "https://centz.herokuapp.com/");
     }
-    @Test
+    @Test(priority = 1)
     public void AboutClickGoesToAbout() {
-        // scenario 2
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/ul/li/a")).click();
         Assert.assertEquals(driver.getCurrentUrl(), "https://centz.herokuapp.com/about");
     }
 
-    @Test
+    @Test(priority = 2)
     public void ChristianLILink() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/ul/li/a")).click();
         JavascriptExecutor je = (JavascriptExecutor) driver;
         Thread.sleep(1000);
         je.executeScript("window.scrollBy(0,750)", "");
         Thread.sleep(1000);
-        WebElement LILink = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[1]/a"));
-        LILink.click();
-
-        ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(handles.get(2));
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://www.linkedin.com/in/christianapostoli/"));
+        String temp = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[1]/a")).getAttribute("href");
+        Assert.assertEquals(temp, "https://www.linkedin.com/in/christianapostoli/");
     }
 
-    @Test
+    @Test(priority = 6)
     public void JakeLILink() throws InterruptedException {
 
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/ul/li/a")).click();
         JavascriptExecutor je = (JavascriptExecutor) driver;
         je.executeScript("window.scrollBy(0, 1050)", "");
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[2]/a")).click();
-        ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(handles.get(2));
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://www.linkedin.com/in/jakewhans/"));
+        String temp = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[2]/a")).getAttribute("href");
+        System.out.println(temp);
+        Assert.assertEquals(temp, "https://www.linkedin.com/in/jakewhans/");
     }
 
-    @Test
+    @Test(priority = 9)
     public void AustinLILink() throws InterruptedException {
         // scenario 2
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/ul/li/a")).click();
         JavascriptExecutor je = (JavascriptExecutor) driver;
         je.executeScript("window.scrollBy(0,1250)", "");
         Thread.sleep(1000);
-        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[3]/a")).click();
-        ArrayList<String> handles = new ArrayList<String>(driver.getWindowHandles());
-        driver.switchTo().window(handles.get(2));
-        Assert.assertTrue(driver.getCurrentUrl().contains("https://www.linkedin.com/in/austin-hood7/"));
+        String temp = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[3]/div[3]/a")).getAttribute("href");
+        Assert.assertEquals(temp, "https://www.linkedin.com/in/austin-hood7/");
     }
 
-    @Test
+    @Test(priority = 4)
     public void CoinRankingLink() throws InterruptedException {
         Thread.sleep(5000);
         JavascriptExecutor je = (JavascriptExecutor) driver;
@@ -98,7 +89,7 @@ public class WebTesting {
         Assert.assertEquals(driver.getCurrentUrl(), "https://coinranking.com/");
     }
 
-    @Test
+    @Test(priority = 5)
     public void SearchCoinsOne() throws InterruptedException {
         // scenario 2
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/div/div/input")).click();
@@ -120,7 +111,7 @@ public class WebTesting {
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/div/div/input")).clear();
     }
 
-    @Test
+    @Test(priority = 8)
     public void OpenCloseSidebar() throws InterruptedException {
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/a/img")).click();
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/nav/ul/div[1]/a")).click();
@@ -128,9 +119,9 @@ public class WebTesting {
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div[1]/a")).click();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 3)
     public void CardClickAndScroll() throws InterruptedException {
-
+        Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@id=\"root\"]/nav/a/img")).click();
         Thread.sleep(5000);
         driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/nav/ul/div[2]/div[2]/div")).click();

@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="https://www.w3.org/1999/xhtml">
 <head>
-<meta charset='utf-8'>
-<title>TestNG Report</title>
-<style type="text/css">
+    <meta charset='utf-8'>
+    <title>TestNG Report</title>
+    <style type="text/css">
 table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
 td,th {border:1px solid #009;padding:.25em .5em}
 .result th {vertical-align:bottom}
@@ -20,82 +20,291 @@ td,th {border:1px solid #009;padding:.25em .5em}
 .failedeven td,.stripe .numi_attn {background-color: #D00}
 .stacktrace {white-space:pre;font-family:monospace}
 .totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
-</style>
+
+    </style>
 </head>
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
-<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">C:/Users/chris/IdeaProjects/TestNGv2/src/test/java/Testcases</a></td><td class="numi">23</td><td class="numi">23</td><td class="numi">0</td><td class="numi">0</td><td class="numi">118.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+    <tr>
+        <th>Test</th>
+        <th>Methods<br/>Passed</th>
+        <th>Scenarios<br/>Passed</th>
+        <th># skipped</th>
+        <th># failed</th>
+        <th>Total<br/>Time</th>
+        <th>Included<br/>Groups</th>
+        <th>Excluded<br/>Groups</th>
+    </tr>
+    <tr>
+        <td style="text-align:left;padding-right:2em"><a href="#t1">C:/Users/chris/IdeaProjects/TestNGv2/src/test/java/Testcases</a>
+        </td>
+        <td class="numi">28</td>
+        <td class="numi">28</td>
+        <td class="numi">0</td>
+        <td class="numi">0</td>
+        <td class="numi">125.7 seconds</td>
+        <td class="numi"></td>
+        <td class="numi"></td>
+    </tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
-<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">C:/Users/chris/IdeaProjects/TestNGv2/src/test/java/Testcases &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="2">Testcases.VectorOperations</td><td><a href="#m1"><b>ScalarTest</b>  </a></td><td class="numi">1</td><td>1681500558266</td><td class="numi">13</td></tr><tr class="passedodd"><td><a href="#m2"><b>SubractTest</b>  </a></td><td class="numi">1</td><td>1681500558280</td><td class="numi">1</td></tr>
-<tr class="passedeven"><td>Testcases.SearchList</td><td><a href="#m3"><b>LinearIterTest</b>  </a></td><td class="numi">1</td><td>1681500558246</td><td class="numi">1</td></tr>
-<tr class="passedodd"><td>Testcases.HeronsFormula</td><td><a href="#m4"><b>HeronsTest</b>  </a></td><td class="numi">1</td><td>1681500558117</td><td class="numi">12</td></tr>
-<tr class="passedeven"><td>Testcases.WebTesting</td><td><a href="#m5"><b>CoinRankingLink</b>  </a></td><td class="numi">1</td><td>1681500604825</td><td class="numi">11067</td></tr>
-<tr class="passedodd"><td>Testcases.MiscMath</td><td><a href="#m6"><b>DistanceTest</b>  </a></td><td class="numi">1</td><td>1681500558136</td><td class="numi">0</td></tr>
-<tr class="passedeven"><td>Testcases.WebTesting</td><td><a href="#m7"><b>OpenCloseSidebar</b>  </a></td><td class="numi">1</td><td>1681500641583</td><td class="numi">1743</td></tr>
-<tr class="passedodd"><td>Testcases.MiscMath</td><td><a href="#m8"><b>SumsTest</b>  </a></td><td class="numi">1</td><td>1681500558234</td><td class="numi">1</td></tr>
-<tr class="passedeven"><td rowspan="2">Testcases.WebTesting</td><td><a href="#m9"><b>CardClickAndScroll</b>  </a></td><td class="numi">1</td><td>1681500657099</td><td class="numi">10223</td></tr><tr class="passedeven"><td><a href="#m10"><b>JakeLILink</b>  </a></td><td class="numi">1</td><td>1681500619524</td><td class="numi">9056</td></tr>
-<tr class="passedodd"><td>Testcases.SearchList</td><td><a href="#m11"><b>BinIterTest</b>  </a></td><td class="numi">1</td><td>1681500558236</td><td class="numi">2</td></tr>
-<tr class="passedeven"><td>Testcases.WebTesting</td><td><a href="#m12"><b>AboutClickGoesToAbout</b>  </a></td><td class="numi">1</td><td>1681500588975</td><td class="numi">168</td></tr>
-<tr class="passedodd"><td>Testcases.VectorOperations</td><td><a href="#m13"><b>MagnitudeTest</b>  </a></td><td class="numi">1</td><td>1681500558264</td><td class="numi">0</td></tr>
-<tr class="passedeven"><td>Testcases.WebTesting</td><td><a href="#m14"><b>AustinLILink</b>  </a></td><td class="numi">1</td><td>1681500591907</td><td class="numi">2152</td></tr>
-<tr class="passedodd"><td>Testcases.SearchList</td><td><a href="#m15"><b>LinerRecurTest</b>  </a></td><td class="numi">1</td><td>1681500558248</td><td class="numi">1</td></tr>
-<tr class="passedeven"><td>Testcases.MiscMath</td><td><a href="#m16"><b>QuadTest</b>  </a></td><td class="numi">1</td><td>1681500558138</td><td class="numi">92</td></tr>
-<tr class="passedodd"><td>Testcases.WebTesting</td><td><a href="#m17"><b>LogoClickGoesHome</b>  </a></td><td class="numi">1</td><td>1681500638962</td><td class="numi">85</td></tr>
-<tr class="passedeven"><td>Testcases.SearchList</td><td><a href="#m18"><b>BinRecurTest</b>  </a></td><td class="numi">1</td><td>1681500558239</td><td class="numi">1</td></tr>
-<tr class="passedodd"><td>Testcases.VectorOperations</td><td><a href="#m19"><b>CosineTest</b>  </a></td><td class="numi">1</td><td>1681500558255</td><td class="numi">1</td></tr>
-<tr class="passedeven"><td>Testcases.WebTesting</td><td><a href="#m20"><b>SearchCoinsOne</b>  </a></td><td class="numi">1</td><td>1681500645870</td><td class="numi">8707</td></tr>
-<tr class="passedodd"><td rowspan="2">Testcases.VectorOperations</td><td><a href="#m21"><b>DotProdTest</b>  </a></td><td class="numi">1</td><td>1681500558259</td><td class="numi">2</td></tr><tr class="passedodd"><td><a href="#m22"><b>AddTest</b>  </a></td><td class="numi">1</td><td>1681500558252</td><td class="numi">1</td></tr>
-<tr class="passedeven"><td>Testcases.WebTesting</td><td><a href="#m23"><b>ChristianLILink</b>  </a></td><td class="numi">1</td><td>1681500597734</td><td class="numi">3182</td></tr>
+    <tr>
+        <th>Class</th>
+        <th>Method</th>
+        <th># of<br/>Scenarios</th>
+        <th>Start</th>
+        <th>Time<br/>(ms)</th>
+    </tr>
+    <tr id="t1">
+        <th colspan="5">C:/Users/chris/IdeaProjects/TestNGv2/src/test/java/Testcases &#8212; passed</th>
+    </tr>
+    <tr class="passedodd">
+        <td rowspan="2">Testcases.VectorOperations</td>
+        <td><a href="#m1"><b>AddTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360893</td>
+        <td class="numi">7</td>
+    </tr>
+    <tr class="passedodd">
+        <td><a href="#m2"><b>CosineTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360926</td>
+        <td class="numi">4</td>
+    </tr>
+    <tr class="passedeven">
+        <td rowspan="3">Testcases.MiscMath</td>
+        <td><a href="#m3"><b>SumsTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360816</td>
+        <td class="numi">1</td>
+    </tr>
+    <tr class="passedeven">
+        <td><a href="#m4"><b>testLcm</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360837</td>
+        <td class="numi">0</td>
+    </tr>
+    <tr class="passedeven">
+        <td><a href="#m5"><b>QuadTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360737</td>
+        <td class="numi">67</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.SearchList</td>
+        <td><a href="#m6"><b>LinerRecurTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360874</td>
+        <td class="numi">1</td>
+    </tr>
+    <tr class="passedeven">
+        <td rowspan="2">Testcases.WebTesting</td>
+        <td><a href="#m7"><b>AboutClickGoesToAbout</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783402173</td>
+        <td class="numi">134</td>
+    </tr>
+    <tr class="passedeven">
+        <td><a href="#m8"><b>CoinRankingLink</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783427503</td>
+        <td class="numi">18663</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.MiscMath</td>
+        <td><a href="#m9"><b>testIsPrime</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360830</td>
+        <td class="numi">1</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.VectorOperations</td>
+        <td><a href="#m10"><b>DotProdTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360938</td>
+        <td class="numi">3</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.MiscMath</td>
+        <td><a href="#m11"><b>testIsPalindrome</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360824</td>
+        <td class="numi">2</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.WebTesting</td>
+        <td><a href="#m12"><b>CardClickAndScroll</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783410112</td>
+        <td class="numi">12252</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.VectorOperations</td>
+        <td><a href="#m13"><b>ScalarTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360957</td>
+        <td class="numi">21</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.MiscMath</td>
+        <td><a href="#m14"><b>testMultiplyMatrices</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360843</td>
+        <td class="numi">3</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.WebTesting</td>
+        <td><a href="#m15"><b>AustinLILink</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783470359</td>
+        <td class="numi">1141</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.VectorOperations</td>
+        <td><a href="#m16"><b>SubractTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360988</td>
+        <td class="numi">3</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.WebTesting</td>
+        <td><a href="#m17"><b>SearchCoinsOne</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783450592</td>
+        <td class="numi">8630</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.HeronsFormula</td>
+        <td><a href="#m18"><b>HeronsTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360712</td>
+        <td class="numi">13</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.SearchList</td>
+        <td><a href="#m19"><b>LinearIterTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360867</td>
+        <td class="numi">2</td>
+    </tr>
+    <tr class="passedeven">
+        <td rowspan="2">Testcases.MiscMath</td>
+        <td><a href="#m20"><b>testGcd</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360820</td>
+        <td class="numi">2</td>
+    </tr>
+    <tr class="passedeven">
+        <td><a href="#m21"><b>DistanceTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360733</td>
+        <td class="numi">2</td>
+    </tr>
+    <tr class="passedodd">
+        <td rowspan="2">Testcases.WebTesting</td>
+        <td><a href="#m22"><b>OpenCloseSidebar</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783465444</td>
+        <td class="numi">2394</td>
+    </tr>
+    <tr class="passedodd">
+        <td><a href="#m23"><b>JakeLILink</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783461777</td>
+        <td class="numi">1133</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.SearchList</td>
+        <td><a href="#m24"><b>BinRecurTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360860</td>
+        <td class="numi">1</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.WebTesting</td>
+        <td><a href="#m25"><b>LogoClickGoesHome</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783424911</td>
+        <td class="numi">66</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.VectorOperations</td>
+        <td><a href="#m26"><b>MagnitudeTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360944</td>
+        <td class="numi">10</td>
+    </tr>
+    <tr class="passedodd">
+        <td>Testcases.SearchList</td>
+        <td><a href="#m27"><b>BinIterTest</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783360854</td>
+        <td class="numi">2</td>
+    </tr>
+    <tr class="passedeven">
+        <td>Testcases.WebTesting</td>
+        <td><a href="#m28"><b>ChristianLILink</b> </a></td>
+        <td class="numi">1</td>
+        <td>1681783405194</td>
+        <td class="numi">2370</td>
+    </tr>
 </table>
 <h1>C:/Users/chris/IdeaProjects/TestNGv2/src/test/java/Testcases</h1>
-<h2 id="m1">Testcases.SearchList:BinIterTest</h2>
+<h2 id="m1">Testcases.VectorOperations:AddTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">Testcases.VectorOperations:ScalarTest</h2>
+<h2 id="m2">Testcases.VectorOperations:CosineTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">Testcases.WebTesting:AboutClickGoesToAbout</h2>
+<h2 id="m3">Testcases.MiscMath:SumsTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">Testcases.VectorOperations:MagnitudeTest</h2>
+<h2 id="m4">Testcases.MiscMath:testLcm</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">Testcases.WebTesting:AustinLILink</h2>
+<h2 id="m5">Testcases.MiscMath:QuadTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m6">Testcases.SearchList:LinerRecurTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">Testcases.VectorOperations:SubractTest</h2>
+<h2 id="m7">Testcases.WebTesting:AboutClickGoesToAbout</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">Testcases.MiscMath:QuadTest</h2>
+<h2 id="m8">Testcases.WebTesting:CoinRankingLink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">Testcases.SearchList:LinearIterTest</h2>
+<h2 id="m9">Testcases.MiscMath:testIsPrime</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m10">Testcases.WebTesting:LogoClickGoesHome</h2>
+<h2 id="m10">Testcases.VectorOperations:DotProdTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m11">Testcases.HeronsFormula:HeronsTest</h2>
+<h2 id="m11">Testcases.MiscMath:testIsPalindrome</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m12">Testcases.WebTesting:CoinRankingLink</h2>
+<h2 id="m12">Testcases.WebTesting:CardClickAndScroll</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m13">Testcases.SearchList:BinRecurTest</h2>
+<h2 id="m13">Testcases.VectorOperations:ScalarTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m14">Testcases.VectorOperations:CosineTest</h2>
+<h2 id="m14">Testcases.MiscMath:testMultiplyMatrices</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m15">Testcases.WebTesting:SearchCoinsOne</h2>
+<h2 id="m15">Testcases.WebTesting:AustinLILink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m16">Testcases.MiscMath:DistanceTest</h2>
+<h2 id="m16">Testcases.VectorOperations:SubractTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m17">Testcases.WebTesting:OpenCloseSidebar</h2>
+<h2 id="m17">Testcases.WebTesting:SearchCoinsOne</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m18">Testcases.VectorOperations:DotProdTest</h2>
+<h2 id="m18">Testcases.HeronsFormula:HeronsTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m19">Testcases.MiscMath:SumsTest</h2>
+<h2 id="m19">Testcases.SearchList:LinearIterTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m20">Testcases.VectorOperations:AddTest</h2>
+<h2 id="m20">Testcases.MiscMath:testGcd</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m21">Testcases.WebTesting:CardClickAndScroll</h2>
+<h2 id="m21">Testcases.MiscMath:DistanceTest</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m22">Testcases.WebTesting:ChristianLILink</h2>
+<h2 id="m22">Testcases.WebTesting:OpenCloseSidebar</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 <h2 id="m23">Testcases.WebTesting:JakeLILink</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-</body></html>
+<h2 id="m24">Testcases.SearchList:BinRecurTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">Testcases.WebTesting:LogoClickGoesHome</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">Testcases.VectorOperations:MagnitudeTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">Testcases.SearchList:BinIterTest</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">Testcases.WebTesting:ChristianLILink</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

@@ -13,6 +13,11 @@
                     <include name="SumsTest"/>
                     <include name="DistanceTest"/>
                     <include name="QuadTest"/>
+                    <include name="testMultiplyMatrices"/>
+                    <include name="testIsPrime"/>
+                    <include name="testIsPalindrome"/>
+                    <include name="testLcm"/>
+                    <include name="testGcd"/>
                 </methods>
             </class>
             <class name="Testcases.SearchList">

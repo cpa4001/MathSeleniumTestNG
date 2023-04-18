@@ -156,7 +156,7 @@ public class MiscMath {
             {139, 154}
         };
 
-        int[][] result = Main.multiplyMatrices(matrixA, matrixB);
+        int[][] result = multiplyMatrices(matrixA, matrixB);
         for (int i = 0; i < result.length; i++) {
             Assert.assertEquals(result[i], expectedResult[i]);
         }
@@ -176,7 +176,7 @@ public class MiscMath {
             {6, 2}
         };
 
-        int[][] result2 = Main.multiplyMatrices(matrixC, matrixD);
+        int[][] result2 = multiplyMatrices(matrixC, matrixD);
         for (int i = 0; i < result2.length; i++) {
             Assert.assertEquals(result2[i], expectedResult2[i]);
         }
@@ -184,32 +184,32 @@ public class MiscMath {
 
     @Test
     public void testIsPrime() {
-        Assert.assertTrue(MathUtil.isPrime(7));
-        Assert.assertTrue(MathUtil.isPrime(29));
-        Assert.assertFalse(MathUtil.isPrime(4));
-        Assert.assertFalse(MathUtil.isPrime(21));
+        Assert.assertTrue(isPrime(7));
+        Assert.assertTrue(isPrime(29));
+        Assert.assertFalse(isPrime(4));
+        Assert.assertFalse(isPrime(21));
     }
 
     @Test
     public void testIsPalindrome() {
-        Assert.assertTrue(StringUtil.isPalindrome("A man, a plan, a canal, Panama!"));
-        Assert.assertTrue(StringUtil.isPalindrome("racecar"));
-        Assert.assertFalse(StringUtil.isPalindrome("hello"));
-        Assert.assertFalse(StringUtil.isPalindrome("world"));
+        Assert.assertTrue(isPalindrome("A man, a plan, a canal, Panama!"));
+        Assert.assertTrue(isPalindrome("racecar"));
+        Assert.assertFalse(isPalindrome("hello"));
+        Assert.assertFalse(isPalindrome("world"));
     }
 
     @Test
     public void testLcm() {
-        Assert.assertEquals(MathUtil.lcm(12, 15), 60);
-        Assert.assertEquals(MathUtil.lcm(3, 5), 15);
-        Assert.assertEquals(MathUtil.lcm(7, 11), 77);
+        Assert.assertEquals(lcm(12, 15), 60);
+        Assert.assertEquals(lcm(3, 5), 15);
+        Assert.assertEquals(lcm(7, 11), 77);
     }
 
     @Test
     public void testGcd() {
-        Assert.assertEquals(MathUtil.gcd(56, 98), 14);
-        Assert.assertEquals(MathUtil.gcd(48, 18), 6);
-        Assert.assertEquals(MathUtil.gcd(100, 75), 25);
+        Assert.assertEquals(gcd(56, 98), 14);
+        Assert.assertEquals(gcd(48, 18), 6);
+        Assert.assertEquals(gcd(100, 75), 25);
     }
 
 }
